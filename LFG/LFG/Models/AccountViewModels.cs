@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace LFG.Models
@@ -79,6 +80,8 @@ namespace LFG.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Display (Name = "Steam ID")]
+        public string SteamUserName { get; set; }
     }
 
     public class ResetPasswordViewModel
